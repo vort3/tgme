@@ -9,8 +9,6 @@ import sys
 import os
 
 def main():
-    logging.basicConfig(level=logging.DEBUG)
-    logging.debug(sys.argv)
     if len(sys.argv) == 1:
         print("""    NAME:
         tgme - send messages to your Telegram account
