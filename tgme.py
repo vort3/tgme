@@ -33,6 +33,8 @@ def main():
         else:                    message = f"<b>{sys.argv[1]}</b>\n<i>{sys.argv[2]}</i>\n\n{' '.join(sys.argv[3:])}"
     else:
         message = "".join(sys.stdin.readlines())
+        message = message.replace("<", "_")
+        message = message.replace(">", "_")
         if message == "":
             return
         message = "<code>" + message + "</code>"
